@@ -52,8 +52,10 @@
 		CFF53D7E2C88228D00837BF1 /* AquaMaster */ = {
 			isa = PBXGroup;
 			children = (
+				CFF53D952C8FCCFD00837BF1 /* Model */,
+				CFF53D942C8FCCF500837BF1 /* ViewModel */,
+				CFF53D932C8FCCED00837BF1 /* View */,
 				CFF53D7F2C88228D00837BF1 /* AquaMasterApp.swift */,
-				CFF53D812C88228D00837BF1 /* ContentView.swift */,
 				CFF53D832C88229200837BF1 /* Assets.xcassets */,
 				CFF53D852C88229200837BF1 /* AquaMaster.entitlements */,
 				CFF53D862C88229200837BF1 /* Preview Content */,
@@ -67,6 +69,28 @@
 				CFF53D872C88229200837BF1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFF53D932C8FCCED00837BF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFF53D812C88228D00837BF1 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFF53D942C8FCCF500837BF1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CFF53D952C8FCCFD00837BF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
