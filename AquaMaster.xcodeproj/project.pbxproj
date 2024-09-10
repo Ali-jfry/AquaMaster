@@ -11,6 +11,13 @@
 		CFF53D822C88228D00837BF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53D812C88228D00837BF1 /* ContentView.swift */; };
 		CFF53D842C88229200837BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF53D832C88229200837BF1 /* Assets.xcassets */; };
 		CFF53D882C88229200837BF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF53D872C88229200837BF1 /* Preview Assets.xcassets */; };
+		CFF53D972C8FCE1400837BF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53D962C8FCE1400837BF1 /* HomeView.swift */; };
+		CFF53D992C8FCF2400837BF1 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53D982C8FCF2400837BF1 /* TaskView.swift */; };
+		CFF53D9D2C8FE0FD00837BF1 /* AquariumTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53D9C2C8FE0FD00837BF1 /* AquariumTask.swift */; };
+		CFF53D9F2C8FE11C00837BF1 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53D9E2C8FE11C00837BF1 /* TaskViewModel.swift */; };
+		CFF53DA12C8FFC1A00837BF1 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DA02C8FFC1A00837BF1 /* TaskRow.swift */; };
+		CFF53DA32C90082700837BF1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DA22C90082700837BF1 /* SettingsView.swift */; };
+		CFF53DA52C900D8500837BF1 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DA42C900D8500837BF1 /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		CFF53D832C88229200837BF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF53D852C88229200837BF1 /* AquaMaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AquaMaster.entitlements; sourceTree = "<group>"; };
 		CFF53D872C88229200837BF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFF53D962C8FCE1400837BF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CFF53D982C8FCF2400837BF1 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		CFF53D9C2C8FE0FD00837BF1 /* AquariumTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumTask.swift; sourceTree = "<group>"; };
+		CFF53D9E2C8FE11C00837BF1 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		CFF53DA02C8FFC1A00837BF1 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		CFF53DA22C90082700837BF1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CFF53DA42C900D8500837BF1 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				CFF53D812C88228D00837BF1 /* ContentView.swift */,
+				CFF53D962C8FCE1400837BF1 /* HomeView.swift */,
+				CFF53D982C8FCF2400837BF1 /* TaskView.swift */,
+				CFF53DA02C8FFC1A00837BF1 /* TaskRow.swift */,
+				CFF53DA22C90082700837BF1 /* SettingsView.swift */,
+				CFF53DA42C900D8500837BF1 /* AddTaskView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -82,6 +101,7 @@
 		CFF53D942C8FCCF500837BF1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CFF53D9E2C8FE11C00837BF1 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -89,6 +109,7 @@
 		CFF53D952C8FCCFD00837BF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFF53D9C2C8FE0FD00837BF1 /* AquariumTask.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,8 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF53D9F2C8FE11C00837BF1 /* TaskViewModel.swift in Sources */,
+				CFF53DA32C90082700837BF1 /* SettingsView.swift in Sources */,
+				CFF53D972C8FCE1400837BF1 /* HomeView.swift in Sources */,
+				CFF53DA52C900D8500837BF1 /* AddTaskView.swift in Sources */,
 				CFF53D822C88228D00837BF1 /* ContentView.swift in Sources */,
 				CFF53D802C88228D00837BF1 /* AquaMasterApp.swift in Sources */,
+				CFF53D9D2C8FE0FD00837BF1 /* AquariumTask.swift in Sources */,
+				CFF53DA12C8FFC1A00837BF1 /* TaskRow.swift in Sources */,
+				CFF53D992C8FCF2400837BF1 /* TaskView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
