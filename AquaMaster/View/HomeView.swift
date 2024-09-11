@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var isLightOn = false
+
     var body: some View {
         VStack{
             Text("AquaMaster")
@@ -29,11 +31,30 @@ struct HomeView: View {
                     Text("12/12/24-12:00")
                 }
                 .padding(.trailing, 16)
-                
-                
-                
+           
             }
             .padding()
+            
+            Image(systemName: isLightOn ? "sun.max.fill" : "moon.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .foregroundColor(isLightOn ? .yellow : .gray)
+                            .animation(.easeInOut, value: isLightOn)
+                        
+                        // Toggle button for the light
+                        Button(action: {
+                            isLightOn.toggle()
+                        }) {
+                            Text(isLightOn ? "Turn Off Light" : "Turn On Light")
+                                .font(.headline)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(isLightOn ? Color.yellow : Color.gray)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+                        .padding()
         }
         .toolbar {
             // Leading toolbar item for the settings button
