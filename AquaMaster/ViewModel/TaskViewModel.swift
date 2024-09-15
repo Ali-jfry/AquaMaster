@@ -25,6 +25,13 @@ class TaskViewModel: ObservableObject{
     func addTask(_ task: AquariumTask){
         taskLists.append(task)
     }
+    func update(_ task: AquariumTask) {
+        if let index = taskLists.firstIndex(where: {$0.id == task.id}) {
+                taskLists[index].date = task.date
+                taskLists[index].title = task.title
+                
+        }
+    }
     
     
 }

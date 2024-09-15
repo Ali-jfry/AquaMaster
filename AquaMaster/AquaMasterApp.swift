@@ -14,6 +14,8 @@ struct AquaMasterApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(taskViewModel)
+//            DailyFeedLogView()
+           
             
         }
     }

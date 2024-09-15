@@ -18,6 +18,10 @@
 		CFF53DA12C8FFC1A00837BF1 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DA02C8FFC1A00837BF1 /* TaskRow.swift */; };
 		CFF53DA32C90082700837BF1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DA22C90082700837BF1 /* SettingsView.swift */; };
 		CFF53DA52C900D8500837BF1 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DA42C900D8500837BF1 /* AddTaskView.swift */; };
+		CFF53DAB2C91738F00837BF1 /*  FeedLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DAA2C91738F00837BF1 /*  FeedLog.swift */; };
+		CFF53DAD2C9178E800837BF1 /* FeedLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DAC2C9178E800837BF1 /* FeedLogViewModel.swift */; };
+		CFF53DAF2C91795300837BF1 /* DailyFeedLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DAE2C91795300837BF1 /* DailyFeedLogView.swift */; };
+		CFF53DB12C97096000837BF1 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DB02C97096000837BF1 /* EditTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		CFF53DA02C8FFC1A00837BF1 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		CFF53DA22C90082700837BF1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CFF53DA42C900D8500837BF1 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		CFF53DAA2C91738F00837BF1 /*  FeedLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " FeedLog.swift"; sourceTree = "<group>"; };
+		CFF53DAC2C9178E800837BF1 /* FeedLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLogViewModel.swift; sourceTree = "<group>"; };
+		CFF53DAE2C91795300837BF1 /* DailyFeedLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFeedLogView.swift; sourceTree = "<group>"; };
+		CFF53DB02C97096000837BF1 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +96,11 @@
 		CFF53D932C8FCCED00837BF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CFF53DB22C97117600837BF1 /* Task */,
 				CFF53D812C88228D00837BF1 /* ContentView.swift */,
 				CFF53D962C8FCE1400837BF1 /* HomeView.swift */,
-				CFF53D982C8FCF2400837BF1 /* TaskView.swift */,
-				CFF53DA02C8FFC1A00837BF1 /* TaskRow.swift */,
 				CFF53DA22C90082700837BF1 /* SettingsView.swift */,
-				CFF53DA42C900D8500837BF1 /* AddTaskView.swift */,
+				CFF53DAE2C91795300837BF1 /* DailyFeedLogView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF53D9E2C8FE11C00837BF1 /* TaskViewModel.swift */,
+				CFF53DAC2C9178E800837BF1 /* FeedLogViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -110,8 +118,20 @@
 			isa = PBXGroup;
 			children = (
 				CFF53D9C2C8FE0FD00837BF1 /* AquariumTask.swift */,
+				CFF53DAA2C91738F00837BF1 /*  FeedLog.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CFF53DB22C97117600837BF1 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				CFF53DA02C8FFC1A00837BF1 /* TaskRow.swift */,
+				CFF53DA42C900D8500837BF1 /* AddTaskView.swift */,
+				CFF53DB02C97096000837BF1 /* EditTaskView.swift */,
+				CFF53D982C8FCF2400837BF1 /* TaskView.swift */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +205,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF53D9F2C8FE11C00837BF1 /* TaskViewModel.swift in Sources */,
+				CFF53DB12C97096000837BF1 /* EditTaskView.swift in Sources */,
 				CFF53DA32C90082700837BF1 /* SettingsView.swift in Sources */,
+				CFF53DAB2C91738F00837BF1 /*  FeedLog.swift in Sources */,
 				CFF53D972C8FCE1400837BF1 /* HomeView.swift in Sources */,
 				CFF53DA52C900D8500837BF1 /* AddTaskView.swift in Sources */,
+				CFF53DAF2C91795300837BF1 /* DailyFeedLogView.swift in Sources */,
 				CFF53D822C88228D00837BF1 /* ContentView.swift in Sources */,
 				CFF53D802C88228D00837BF1 /* AquaMasterApp.swift in Sources */,
+				CFF53DAD2C9178E800837BF1 /* FeedLogViewModel.swift in Sources */,
 				CFF53D9D2C8FE0FD00837BF1 /* AquariumTask.swift in Sources */,
 				CFF53DA12C8FFC1A00837BF1 /* TaskRow.swift in Sources */,
 				CFF53D992C8FCF2400837BF1 /* TaskView.swift in Sources */,

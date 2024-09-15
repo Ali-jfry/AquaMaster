@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
   
     @EnvironmentObject var taskViewModel : TaskViewModel
-    @State var selectionTab : Int = 2
+    @State var selectionTab : Int = 1
     var body: some View {
+            
         
             TabView (selection: $selectionTab) {
                 NavigationView{
@@ -23,7 +24,7 @@ struct ContentView: View {
                         Text("Home")
                     }
                 }
-                
+                .tag(1)
                 NavigationView{
                     TaskView()
                 }
