@@ -4,58 +4,77 @@ struct DailyFeedLogView: View {
     @StateObject private var viewModel = FeedLogViewModel()
     
     var body: some View {
-        
-        ZStack{
-            VStack {
-                
+        ZStack {
+            // Background Color or Image
+            Color("primaryColor")
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 20) {
+                // Header
                 Text("Today's Feed Log")
-                    .font(.headline)
-                    .padding(.bottom)
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(Color("secondaryColor"))
+                    .padding(.top)
                 
+                // Progress Indicator (Optional)
+                ProgressView(value: viewModel.completedFeedings(), total: Double(viewModel.feedLogs.count))
+                    .padding(.horizontal)
+                    .progressViewStyle(LinearProgressViewStyle(tint: .green))
+                
+                // Feed Log List
                 List {
                     ForEach(viewModel.feedLogs) { log in
                         HStack {
                             Text(log.time)
-                                .foregroundColor(.black)
+                                .font(.headline)
+                                .foregroundColor(.primary)
                             
                             Spacer()
                             
                             Button(action: {
                                 viewModel.toggleFed(for: log)
+                                // Haptic feedback
+                                let generator = UIImpactFeedbackGenerator(style: .medium)
+                                generator.impactOccurred()
                             }) {
                                 Image(systemName: log.isFed ? "checkmark.circle.fill" : "circle")
                                     .foregroundColor(log.isFed ? .green : .gray)
+                                    .font(.system(size: 24))
                             }
+                            .buttonStyle(PlainButtonStyle())
                         }
+                        .padding(.vertical, 8)
                     }
                 }
-                .listStyle(PlainListStyle())
+                .background(Color("secondaryColor"))
+                .listStyle(InsetGroupedListStyle())
+                .scrollContentBackground(.hidden)
+                .frame(maxHeight: 300)
+                .cornerRadius(12)
                 
-                // Option to clear or reset the feed log for the day
+                .padding(.horizontal)
+                
+                
+                // Reset Button
                 Button(action: {
-                    resetFeedLog()
+                    viewModel.resetFeedLog()
                 }) {
                     Text("Reset Feed Log")
-                        .font(.subheadline)
-                        .padding()
-                        .background(Color.red)
+                        .font(.headline)
                         .foregroundColor(.white)
-                        .cornerRadius(8)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.red)
+                        .cornerRadius(12)
                 }
-                .padding(.top, 16)
+                .padding(.horizontal)
+                
+                Spacer()
             }
-            .padding()
         }
-       
     }
-    
-    // Reset all feed logs for the day
-    private func resetFeedLog() {
-        for index in viewModel.feedLogs.indices {
-            viewModel.feedLogs[index].isFed = false
-        }
-        viewModel.saveFeedLogs()
-    }
+   
 }
 
 #Preview {

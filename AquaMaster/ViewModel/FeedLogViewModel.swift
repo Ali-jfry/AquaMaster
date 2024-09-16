@@ -45,4 +45,15 @@ class FeedLogViewModel: ObservableObject {
         dateFormatter.dateStyle = .medium // Choose the style you want (medium, short, long, etc.)
         return dateFormatter.string(from: Date())
     }
+     func completedFeedings() -> Double {
+        return Double(feedLogs.filter { $0.isFed }.count)
+    }
+    
+    // Reset all feed logs for the day
+     func resetFeedLog() {
+        for index in feedLogs.indices {
+            feedLogs[index].isFed = false
+        }
+        saveFeedLogs()
+    }
 }
