@@ -12,6 +12,8 @@ struct AquaMasterApp: App {
     @StateObject var taskViewModel = TaskViewModel()
     var body: some Scene {
         WindowGroup {
+           
+           
             ContentView()
                 .environmentObject(taskViewModel)
 //            DailyFeedLogView()

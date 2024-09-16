@@ -15,44 +15,58 @@ struct ContentView: View {
             
         
             TabView (selection: $selectionTab) {
-                NavigationView{
-                    HomeView()
-                }
-                .tabItem {
-                    VStack {
-                        Image(systemName: "house")
-                        Text("Home")
+                Group{
+                    NavigationView{
+                        HomeView()
+                            
                     }
-                }
-                .tag(1)
-                NavigationView{
-                    TaskView()
-                }
-                .tabItem {
-                    VStack {
-                        Image(systemName: "clipboard")
-                        Text("Task")
-                    }
-                }
-                .tag(2)
-                
-                Text("Profile view")
                     .tabItem {
                         VStack {
-                            Image(systemName: "person")
-                            Text("Profile")
+                            Image(systemName: "house")
+                            Text("Home")
                         }
                     }
+                    .tag(1)
+                    NavigationView{
+                        TaskView()
+                    }
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "clipboard")
+                            Text("Task")
+                        }
+                    }
+                    .tag(2)
                     
+                    Text("Profile view")
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "person")
+                                    
+                                Text("Profile")
+                                    
+                            }
+                            
+                        }
+                       
+                }
+                
+                .toolbarBackground(Color("primaryColor"), for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
+                
+                   
                     
                 }
+          
+            
+            
                 
             }                  
             
           
-//            .padding()
+//            .
         }
-//        .toolbarBackground(Color.green)
+//
 
 
 

@@ -22,6 +22,11 @@
 		CFF53DAD2C9178E800837BF1 /* FeedLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DAC2C9178E800837BF1 /* FeedLogViewModel.swift */; };
 		CFF53DAF2C91795300837BF1 /* DailyFeedLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DAE2C91795300837BF1 /* DailyFeedLogView.swift */; };
 		CFF53DB12C97096000837BF1 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DB02C97096000837BF1 /* EditTaskView.swift */; };
+		CFF53DB42C97213100837BF1 /* UpdateDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DB32C97213100837BF1 /* UpdateDetailsView.swift */; };
+		CFF53DB72C97BA9600837BF1 /* WaterQualityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DB62C97BA9600837BF1 /* WaterQualityModel.swift */; };
+		CFF53DB92C97BAE000837BF1 /* WaterQualityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DB82C97BAE000837BF1 /* WaterQualityStatus.swift */; };
+		CFF53DBB2C97BB3100837BF1 /* WaterQualityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DBA2C97BB3100837BF1 /* WaterQualityViewModel.swift */; };
+		CFF53DBD2C97BB9700837BF1 /* WaterQualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DBC2C97BB9600837BF1 /* WaterQualityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		CFF53DAC2C9178E800837BF1 /* FeedLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLogViewModel.swift; sourceTree = "<group>"; };
 		CFF53DAE2C91795300837BF1 /* DailyFeedLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFeedLogView.swift; sourceTree = "<group>"; };
 		CFF53DB02C97096000837BF1 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		CFF53DB32C97213100837BF1 /* UpdateDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetailsView.swift; sourceTree = "<group>"; };
+		CFF53DB62C97BA9600837BF1 /* WaterQualityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterQualityModel.swift; sourceTree = "<group>"; };
+		CFF53DB82C97BAE000837BF1 /* WaterQualityStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterQualityStatus.swift; sourceTree = "<group>"; };
+		CFF53DBA2C97BB3100837BF1 /* WaterQualityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterQualityViewModel.swift; sourceTree = "<group>"; };
+		CFF53DBC2C97BB9600837BF1 /* WaterQualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterQualityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,11 @@
 				CFF53DB22C97117600837BF1 /* Task */,
 				CFF53D812C88228D00837BF1 /* ContentView.swift */,
 				CFF53D962C8FCE1400837BF1 /* HomeView.swift */,
+				CFF53DB82C97BAE000837BF1 /* WaterQualityStatus.swift */,
 				CFF53DA22C90082700837BF1 /* SettingsView.swift */,
 				CFF53DAE2C91795300837BF1 /* DailyFeedLogView.swift */,
+				CFF53DB32C97213100837BF1 /* UpdateDetailsView.swift */,
+				CFF53DBC2C97BB9600837BF1 /* WaterQualityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +123,7 @@
 			children = (
 				CFF53D9E2C8FE11C00837BF1 /* TaskViewModel.swift */,
 				CFF53DAC2C9178E800837BF1 /* FeedLogViewModel.swift */,
+				CFF53DBA2C97BB3100837BF1 /* WaterQualityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -119,6 +133,7 @@
 			children = (
 				CFF53D9C2C8FE0FD00837BF1 /* AquariumTask.swift */,
 				CFF53DAA2C91738F00837BF1 /*  FeedLog.swift */,
+				CFF53DB62C97BA9600837BF1 /* WaterQualityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,14 +219,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF53DBD2C97BB9700837BF1 /* WaterQualityView.swift in Sources */,
+				CFF53DBB2C97BB3100837BF1 /* WaterQualityViewModel.swift in Sources */,
 				CFF53D9F2C8FE11C00837BF1 /* TaskViewModel.swift in Sources */,
 				CFF53DB12C97096000837BF1 /* EditTaskView.swift in Sources */,
 				CFF53DA32C90082700837BF1 /* SettingsView.swift in Sources */,
+				CFF53DB92C97BAE000837BF1 /* WaterQualityStatus.swift in Sources */,
 				CFF53DAB2C91738F00837BF1 /*  FeedLog.swift in Sources */,
 				CFF53D972C8FCE1400837BF1 /* HomeView.swift in Sources */,
+				CFF53DB72C97BA9600837BF1 /* WaterQualityModel.swift in Sources */,
 				CFF53DA52C900D8500837BF1 /* AddTaskView.swift in Sources */,
 				CFF53DAF2C91795300837BF1 /* DailyFeedLogView.swift in Sources */,
 				CFF53D822C88228D00837BF1 /* ContentView.swift in Sources */,
+				CFF53DB42C97213100837BF1 /* UpdateDetailsView.swift in Sources */,
 				CFF53D802C88228D00837BF1 /* AquaMasterApp.swift in Sources */,
 				CFF53DAD2C9178E800837BF1 /* FeedLogViewModel.swift in Sources */,
 				CFF53D9D2C8FE0FD00837BF1 /* AquariumTask.swift in Sources */,
