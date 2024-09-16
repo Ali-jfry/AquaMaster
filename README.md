@@ -17,7 +17,6 @@ Features
 * Settings:
    * Update Details: not finished at the moment.
    * Change Theme: not finished at the moment.
-   * Manage not finished at the moment.
    * Logout: Securely log out of your account.
 
 * Install Dependencies
