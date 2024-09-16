@@ -8,47 +8,75 @@
 import SwiftUI
 
 struct TaskView: View {
-//
     @EnvironmentObject var taskViewModel: TaskViewModel
     @State var addTaskViewPresented: Bool = false
+
     var body: some View {
-            HStack{
-                List{
-                    ForEach(taskViewModel.taskLists){ task in
+        ZStack {
+            // Background Color
+            Color("secondaryColor")
+                .edgesIgnoringSafeArea(.all)
+
+            VStack(spacing: 20) {
+                // Header
+                HStack{
+                    Text("Task List")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(Color("primaryColor"))
+                        .padding(.top)
+                    Spacer()
+                    Button(action: {
+                                addTaskViewPresented = true
+                            }) {
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(Color("primaryColor"))
+                                    
+                        }
+                            .padding()
+                            .accessibilityLabel("Add Task")
+                }
+                .padding([.horizontal, .top])
+
+                // Task List
+                List {
+                    ForEach(taskViewModel.taskLists) { task in
                         TaskRow(task: task)
-                            .swipeActions {
+                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
                                     taskViewModel.delete(task)
                                 } label: {
-                                    Image(systemName: "trash")
+                                    Label("Delete", systemImage: "trash")
                                 }
                             }
+                            .listRowBackground(Color.clear) // Make row background transparent
+                            .listRowSeparator(.hidden)      // Hide separators between rows
                     }
                 }
+                .listStyle(InsetGroupedListStyle())
+                .scrollContentBackground(.hidden) // Hide default background
+                .background(Color("primaryColor"))
+                .cornerRadius(12)
+                .padding(.horizontal)
+
+                Spacer()
             }
-        
-        .navigationTitle("Task Lists")
-        .toolbar{
-            // Leading toolbar item for the settings button
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    addTaskViewPresented = true
-                    
-                }) {
-                    Image(systemName: "plus.circle.fill")
-                        .imageScale(.medium)
-                        
-                }
-            }
+            .padding(.top)
+
+            // Floating Add Task Button
+            
         }
-        .sheet(isPresented: $addTaskViewPresented)  {
+        .sheet(isPresented: $addTaskViewPresented) {
             AddTaskView()
+                .environmentObject(taskViewModel)
         }
-        
     }
 }
 
 #Preview {
-    TaskView()
-        .environmentObject(TaskViewModel())
+    NavigationView {
+        TaskView()
+            .environmentObject(TaskViewModel())
+    }
 }

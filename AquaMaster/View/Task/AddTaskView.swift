@@ -8,41 +8,81 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    @EnvironmentObject var taskViewModel : TaskViewModel
-    @State var selectDate = Date()
-    @State var taskTitle = ""
+    @EnvironmentObject var taskViewModel: TaskViewModel
+    @State private var selectDate = Date()
+    @State private var taskTitle = ""
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack{
-            Form{
+        NavigationView {
+            VStack {
+                // Header
+                Text("Add New Task")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(Color("primaryColor"))
+                    .padding(.top)
+                
                 Spacer()
-                DatePicker(selection: $selectDate){
-                    Text("Date and time")
+                
+                // Form Fields
+                VStack(spacing: 20) {
+                    // Task Title Input
+                    TextField("Task Title", text: $taskTitle)
+                        .padding()
+                        .background(Color(UIColor.secondarySystemBackground))
+                        .cornerRadius(10)
+                        .shadow(radius: 1)
+                        .padding(.horizontal)
+                    
+                    // Date Picker
+                    DatePicker("Date and Time", selection: $selectDate, displayedComponents: [.date, .hourAndMinute])
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                        .padding(.horizontal)
                 }
-                TextField("Task title", text: $taskTitle)
-     
+                .padding(.vertical)
+                
+                Spacer()
+                
+                // Add Task Button
+                Button(action: {
+                    let newTask = AquariumTask(id: UUID(), title: taskTitle, date: selectDate)
+                    taskViewModel.addTask(newTask)
+                    dismiss()
+                }) {
+                    Text("Add Task")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color("primaryColor"))
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                        
+                }
+                .padding(.bottom)
+                .disabled(taskTitle.isEmpty) // Disable button if task title is empty
+                .opacity(taskTitle.isEmpty ? 0.6 : 1.0) // Adjust opacity when disabled
+                
+                // Cancel Button
+                Button(action: {
+                    dismiss()
+                }) {
+                    Text("Cancel")
+                        .font(.headline)
+                        .foregroundColor(Color("primaryColor"))
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color("secondaryColor"))
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                        
+                }
+                .padding(.bottom)
             }
-            .padding(.top, 40)
-            Spacer()
-            Button{
-                let newtask = AquariumTask(id: UUID(), title: taskTitle, date: selectDate)
-                taskViewModel.addTask(newtask)
-                dismiss()
-            }label: {
-                Text("Add Task")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding()
-         
+            .navigationBarHidden(true)
             
         }
-        
     }
 }
 
