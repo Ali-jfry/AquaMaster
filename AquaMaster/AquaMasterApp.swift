@@ -9,16 +9,14 @@ import SwiftUI
 
 @main
 struct AquaMasterApp: App {
-    @StateObject var taskViewModel = TaskViewModel()
+    @StateObject private var loginViewModel = LoginViewModel()
+    @StateObject private var taskViewModel = TaskViewModel()
+
     var body: some Scene {
         WindowGroup {
-           
-           
-            ContentView()
+            RootView()
+                .environmentObject(loginViewModel)
                 .environmentObject(taskViewModel)
-//            DailyFeedLogView()
-           
-            
         }
     }
 }

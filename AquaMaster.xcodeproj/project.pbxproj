@@ -27,6 +27,14 @@
 		CFF53DB92C97BAE000837BF1 /* WaterQualityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DB82C97BAE000837BF1 /* WaterQualityStatus.swift */; };
 		CFF53DBB2C97BB3100837BF1 /* WaterQualityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DBA2C97BB3100837BF1 /* WaterQualityViewModel.swift */; };
 		CFF53DBD2C97BB9700837BF1 /* WaterQualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DBC2C97BB9600837BF1 /* WaterQualityView.swift */; };
+		CFF53DC02C9807B700837BF1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DBF2C9807B700837BF1 /* User.swift */; };
+		CFF53DC22C9807CA00837BF1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DC12C9807CA00837BF1 /* LoginViewModel.swift */; };
+		CFF53DC42C9808A600837BF1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DC32C9808A600837BF1 /* RootView.swift */; };
+		CFF53DC62C9808DD00837BF1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DC52C9808DD00837BF1 /* LoginView.swift */; };
+		CFF53DC92C9811DE00837BF1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CFF53DC82C9811DE00837BF1 /* Lottie */; };
+		CFF53DCC2C9812AC00837BF1 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DCB2C9812AC00837BF1 /* LottieView.swift */; };
+		CFF53DCE2C9812C900837BF1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF53DCD2C9812C900837BF1 /* Constant.swift */; };
+		CFF53DD02C98133C00837BF1 /* fish.json in Resources */ = {isa = PBXBuildFile; fileRef = CFF53DCF2C98133C00837BF1 /* fish.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +60,13 @@
 		CFF53DB82C97BAE000837BF1 /* WaterQualityStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterQualityStatus.swift; sourceTree = "<group>"; };
 		CFF53DBA2C97BB3100837BF1 /* WaterQualityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterQualityViewModel.swift; sourceTree = "<group>"; };
 		CFF53DBC2C97BB9600837BF1 /* WaterQualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterQualityView.swift; sourceTree = "<group>"; };
+		CFF53DBF2C9807B700837BF1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CFF53DC12C9807CA00837BF1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CFF53DC32C9808A600837BF1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		CFF53DC52C9808DD00837BF1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CFF53DCB2C9812AC00837BF1 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		CFF53DCD2C9812C900837BF1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CFF53DCF2C98133C00837BF1 /* fish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fish.json; path = ../../../../../Downloads/fish.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF53DC92C9811DE00837BF1 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +100,7 @@
 		CFF53D7E2C88228D00837BF1 /* AquaMaster */ = {
 			isa = PBXGroup;
 			children = (
+				CFF53DCA2C98128100837BF1 /* LottieAnimation */,
 				CFF53D952C8FCCFD00837BF1 /* Model */,
 				CFF53D942C8FCCF500837BF1 /* ViewModel */,
 				CFF53D932C8FCCED00837BF1 /* View */,
@@ -91,6 +108,7 @@
 				CFF53D832C88229200837BF1 /* Assets.xcassets */,
 				CFF53D852C88229200837BF1 /* AquaMaster.entitlements */,
 				CFF53D862C88229200837BF1 /* Preview Content */,
+				CFF53DC32C9808A600837BF1 /* RootView.swift */,
 			);
 			path = AquaMaster;
 			sourceTree = "<group>";
@@ -106,14 +124,14 @@
 		CFF53D932C8FCCED00837BF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CFF53DBE2C98072300837BF1 /* WaterQuality */,
 				CFF53DB22C97117600837BF1 /* Task */,
 				CFF53D812C88228D00837BF1 /* ContentView.swift */,
 				CFF53D962C8FCE1400837BF1 /* HomeView.swift */,
-				CFF53DB82C97BAE000837BF1 /* WaterQualityStatus.swift */,
 				CFF53DA22C90082700837BF1 /* SettingsView.swift */,
 				CFF53DAE2C91795300837BF1 /* DailyFeedLogView.swift */,
 				CFF53DB32C97213100837BF1 /* UpdateDetailsView.swift */,
-				CFF53DBC2C97BB9600837BF1 /* WaterQualityView.swift */,
+				CFF53DC52C9808DD00837BF1 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +142,7 @@
 				CFF53D9E2C8FE11C00837BF1 /* TaskViewModel.swift */,
 				CFF53DAC2C9178E800837BF1 /* FeedLogViewModel.swift */,
 				CFF53DBA2C97BB3100837BF1 /* WaterQualityViewModel.swift */,
+				CFF53DC12C9807CA00837BF1 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -134,6 +153,7 @@
 				CFF53D9C2C8FE0FD00837BF1 /* AquariumTask.swift */,
 				CFF53DAA2C91738F00837BF1 /*  FeedLog.swift */,
 				CFF53DB62C97BA9600837BF1 /* WaterQualityModel.swift */,
+				CFF53DBF2C9807B700837BF1 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +167,25 @@
 				CFF53D982C8FCF2400837BF1 /* TaskView.swift */,
 			);
 			path = Task;
+			sourceTree = "<group>";
+		};
+		CFF53DBE2C98072300837BF1 /* WaterQuality */ = {
+			isa = PBXGroup;
+			children = (
+				CFF53DB82C97BAE000837BF1 /* WaterQualityStatus.swift */,
+				CFF53DBC2C97BB9600837BF1 /* WaterQualityView.swift */,
+			);
+			path = WaterQuality;
+			sourceTree = "<group>";
+		};
+		CFF53DCA2C98128100837BF1 /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				CFF53DCB2C9812AC00837BF1 /* LottieView.swift */,
+				CFF53DCF2C98133C00837BF1 /* fish.json */,
+				CFF53DCD2C9812C900837BF1 /* Constant.swift */,
+			);
+			path = LottieAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +204,9 @@
 			dependencies = (
 			);
 			name = AquaMaster;
+			packageProductDependencies = (
+				CFF53DC82C9811DE00837BF1 /* Lottie */,
+			);
 			productName = AquaMaster;
 			productReference = CFF53D7C2C88228D00837BF1 /* AquaMaster.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +235,9 @@
 				Base,
 			);
 			mainGroup = CFF53D732C88228D00837BF1;
+			packageReferences = (
+				CFF53DC72C9811DD00837BF1 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = CFF53D7D2C88228D00837BF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF53DD02C98133C00837BF1 /* fish.json in Resources */,
 				CFF53D882C88229200837BF1 /* Preview Assets.xcassets in Resources */,
 				CFF53D842C88229200837BF1 /* Assets.xcassets in Resources */,
 			);
@@ -227,16 +273,22 @@
 				CFF53DB92C97BAE000837BF1 /* WaterQualityStatus.swift in Sources */,
 				CFF53DAB2C91738F00837BF1 /*  FeedLog.swift in Sources */,
 				CFF53D972C8FCE1400837BF1 /* HomeView.swift in Sources */,
+				CFF53DC62C9808DD00837BF1 /* LoginView.swift in Sources */,
 				CFF53DB72C97BA9600837BF1 /* WaterQualityModel.swift in Sources */,
 				CFF53DA52C900D8500837BF1 /* AddTaskView.swift in Sources */,
+				CFF53DCE2C9812C900837BF1 /* Constant.swift in Sources */,
 				CFF53DAF2C91795300837BF1 /* DailyFeedLogView.swift in Sources */,
+				CFF53DC42C9808A600837BF1 /* RootView.swift in Sources */,
 				CFF53D822C88228D00837BF1 /* ContentView.swift in Sources */,
 				CFF53DB42C97213100837BF1 /* UpdateDetailsView.swift in Sources */,
+				CFF53DC22C9807CA00837BF1 /* LoginViewModel.swift in Sources */,
 				CFF53D802C88228D00837BF1 /* AquaMasterApp.swift in Sources */,
 				CFF53DAD2C9178E800837BF1 /* FeedLogViewModel.swift in Sources */,
 				CFF53D9D2C8FE0FD00837BF1 /* AquariumTask.swift in Sources */,
 				CFF53DA12C8FFC1A00837BF1 /* TaskRow.swift in Sources */,
+				CFF53DCC2C9812AC00837BF1 /* LottieView.swift in Sources */,
 				CFF53D992C8FCF2400837BF1 /* TaskView.swift in Sources */,
+				CFF53DC02C9807B700837BF1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CFF53DC72C9811DD00837BF1 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CFF53DC82C9811DE00837BF1 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFF53DC72C9811DD00837BF1 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFF53D742C88228D00837BF1 /* Project object */;
 }

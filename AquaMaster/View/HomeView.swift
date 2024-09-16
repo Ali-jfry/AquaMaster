@@ -14,6 +14,9 @@ struct HomeView: View {
     @State private var showSettings: Bool = false
     @StateObject private var waterQualityViewModel = WaterQualityViewModel()
     @State var showWaterQualityView : Bool = false
+    
+    @EnvironmentObject var loginViewModel: LoginViewModel
+
     var primaryColor: Color {
         Color(red: 92 / 255.0, green: 42 / 255.0, blue: 85 / 255.0)
     }
@@ -105,7 +108,6 @@ struct HomeView: View {
                         RoundedRectangle(cornerRadius: 12)
                             .fill(primaryColor)
                     )
-                    .padding(.trailing, 16)
                 }
                 .padding(.top, 16)
                 .padding(.bottom, 8)
@@ -150,24 +152,16 @@ struct HomeView: View {
                     }
                 }
 
-                // Trailing toolbar item for the person button
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        // Action for profile
-                    }) {
-                        Image(systemName: "person.crop.circle")
-                            .font(.system(size: 24))
-                            .padding(.trailing, 16)
-                            .foregroundColor(primaryColor)
-                    }
-                }
+                
             }
             .sheet(isPresented: $feedLogPresent) {
                 DailyFeedLogView()
             }
             .fullScreenCover(isPresented: $showSettings) {
                 SettingsView()
+                    .environmentObject(loginViewModel)
             }
+            
         }
     }
 }

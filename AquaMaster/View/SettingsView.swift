@@ -18,6 +18,7 @@ struct SettingsView: View {
     }
     
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var loginViewModel : LoginViewModel
     
     var body: some View {
         NavigationView { // Wrap in NavigationView
@@ -37,7 +38,7 @@ struct SettingsView: View {
                         .frame(width: 100, height: 100, alignment: .center)
                         .foregroundColor(secondaryColor)
                     
-                    Text("User Name")
+                    Text(loginViewModel.username)
                         .font(.title3)
                         .foregroundColor(secondaryColor)
                         .padding(.top, 10)
@@ -83,7 +84,7 @@ struct SettingsView: View {
                     .padding(.top, 10)
                     
                     Button {
-                        // Action for logging out
+                        loginViewModel.logout()
                     } label: {
                         Text("Log out")
                             .font(.title2)
@@ -95,6 +96,7 @@ struct SettingsView: View {
                     }
                     .padding(.horizontal, 40)
                     .padding(.top, 10)
+                    
                     
                     
                 }
@@ -121,4 +123,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+        .environmentObject(LoginViewModel())
 }
