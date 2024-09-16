@@ -42,7 +42,7 @@ class FeedLogViewModel: ObservableObject {
     }
     func todaysDate() -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium // Choose the style you want (medium, short, long, etc.)
+        dateFormatter.dateStyle = .medium 
         return dateFormatter.string(from: Date())
     }
      func completedFeedings() -> Double {

@@ -17,7 +17,7 @@ struct DailyFeedLogView: View {
                     .foregroundColor(Color("secondaryColor"))
                     .padding(.top)
                 
-                // Progress Indicator (Optional)
+                // Progress Indicator
                 ProgressView(value: viewModel.completedFeedings(), total: Double(viewModel.feedLogs.count))
                     .padding(.horizontal)
                     .progressViewStyle(LinearProgressViewStyle(tint: .green))

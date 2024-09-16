@@ -50,8 +50,8 @@ struct TaskView: View {
                                     Label("Delete", systemImage: "trash")
                                 }
                             }
-                            .listRowBackground(Color.clear) // Make row background transparent
-                            .listRowSeparator(.hidden)      // Hide separators between rows
+                            .listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
@@ -64,7 +64,6 @@ struct TaskView: View {
             }
             .padding(.top)
 
-            // Floating Add Task Button
             
         }
         .sheet(isPresented: $addTaskViewPresented) {

@@ -105,10 +105,10 @@
 				CFF53D942C8FCCF500837BF1 /* ViewModel */,
 				CFF53D932C8FCCED00837BF1 /* View */,
 				CFF53D7F2C88228D00837BF1 /* AquaMasterApp.swift */,
+				CFF53DC32C9808A600837BF1 /* RootView.swift */,
 				CFF53D832C88229200837BF1 /* Assets.xcassets */,
 				CFF53D852C88229200837BF1 /* AquaMaster.entitlements */,
 				CFF53D862C88229200837BF1 /* Preview Content */,
-				CFF53DC32C9808A600837BF1 /* RootView.swift */,
 			);
 			path = AquaMaster;
 			sourceTree = "<group>";

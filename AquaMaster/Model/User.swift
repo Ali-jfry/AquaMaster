@@ -9,7 +9,7 @@ import Foundation
 
 class User: Codable {
     var username: String
-    var password: String // Insecure to store plaintext passwords in UserDefaults
+    var password: String 
 
     init(username: String, password: String) {
         self.username = username
